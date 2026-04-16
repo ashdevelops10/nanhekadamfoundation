@@ -57,10 +57,10 @@ export default function ProjectsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+          <span className="text-[#C4A265] font-semibold text-sm uppercase tracking-wider">
             Our Reach
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-text mt-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-dark mt-3">
             Where We Work
           </h2>
         </motion.div>
@@ -77,12 +77,12 @@ export default function ProjectsSection() {
                 href={`/projects/${project.slug}`}
                 className="block group h-full"
               >
-                <div className="h-full bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-1">
+                <div className="h-full bg-gradient-to-br from-[#2D4A3E]/5 to-[#2D4A3E]/10 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-1 border border-[#C4A265]/10">
                   <div className="text-4xl mb-4">{project.emoji}</div>
                   <span
                     className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3 ${
                       project.status === "active"
-                        ? "bg-accent/10 text-accent"
+                        ? "bg-[#C4A265]/10 text-[#C4A265]"
                         : project.status === "upcoming"
                         ? "bg-blue-100 text-blue-700"
                         : "bg-gray-100 text-gray-600"
@@ -90,7 +90,7 @@ export default function ProjectsSection() {
                   >
                     {project.statusLabel}
                   </span>
-                  <h3 className="font-bold text-text text-lg mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="font-bold text-primary-dark text-lg mb-2 group-hover:text-[#C4A265] transition-colors">
                     {project.title}
                   </h3>
                   <p className="flex items-center gap-1.5 text-sm text-text-light">
@@ -111,7 +111,7 @@ export default function ProjectsSection() {
         >
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
+            className="inline-flex items-center gap-2 text-[#2D4A3E] font-semibold hover:gap-3 transition-all hover:text-[#C4A265]"
           >
             View All Projects <ArrowRight size={18} />
           </Link>

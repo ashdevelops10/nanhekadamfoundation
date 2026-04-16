@@ -24,11 +24,11 @@ export default function NewsletterForm() {
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Your email"
         required
-        className="flex-1 px-4 py-2.5 bg-white/10 border border-white/20 rounded-full text-white placeholder:text-white/40 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50"
+        className="flex-1 px-4 py-2.5 bg-white/10 border border-[#C4A265]/30 rounded-full text-white placeholder:text-white/40 text-sm focus:outline-none focus:ring-2 focus:ring-[#C4A265]/50"
       />
       <button
         type="submit"
-        className="px-4 py-2.5 bg-accent hover:bg-accent-light rounded-full text-white transition-colors"
+        className="px-4 py-2.5 bg-[#C4A265] hover:bg-[#d4b87a] rounded-full text-[#2D4A3E] font-semibold transition-colors"
         aria-label="Subscribe"
       >
         {submitted ? "✓" : <Send size={16} />}

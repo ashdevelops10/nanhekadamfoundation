@@ -47,16 +47,16 @@ export default function NewsSection() {
           className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-12 gap-4"
         >
           <div>
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+            <span className="text-[#C4A265] font-semibold text-sm uppercase tracking-wider">
               Latest Updates
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-text mt-2">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-dark mt-2">
               News & Updates
             </h2>
           </div>
           <Link
             href="/news"
-            className="flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
+            className="flex items-center gap-2 text-[#2D4A3E] font-semibold hover:gap-3 transition-all hover:text-[#C4A265]"
           >
             All News <ArrowRight size={18} />
           </Link>
@@ -72,19 +72,19 @@ export default function NewsSection() {
               className="group"
             >
               <Link href={`/news/${item.slug}`} className="block">
-                <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl mb-4 overflow-hidden flex items-center justify-center">
+                <div className="aspect-[16/10] bg-gradient-to-br from-[#2D4A3E]/10 to-[#2D4A3E]/5 rounded-2xl mb-4 overflow-hidden flex items-center justify-center">
                   <span className="text-5xl">
                     {index === 0 ? "🏫" : index === 1 ? "👩‍🏫" : "🎓"}
                   </span>
                 </div>
                 <span className="text-sm text-text-light">{item.date}</span>
-                <h3 className="text-lg font-bold text-text mt-1 mb-2 group-hover:text-primary transition-colors leading-snug">
+                <h3 className="text-lg font-bold text-primary-dark mt-1 mb-2 group-hover:text-[#C4A265] transition-colors leading-snug">
                   {item.title}
                 </h3>
                 <p className="text-sm text-text-light leading-relaxed">
                   {item.excerpt}
                 </p>
-                <span className="inline-flex items-center gap-1 text-primary font-semibold text-sm mt-3 group-hover:gap-2 transition-all">
+                <span className="inline-flex items-center gap-1 text-[#C4A265] font-semibold text-sm mt-3 group-hover:gap-2 transition-all">
                   Read more <ArrowRight size={14} />
                 </span>
               </Link>

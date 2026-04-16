@@ -64,7 +64,7 @@ const projects = [
 export default function ProjectsPage() {
   return (
     <>
-      <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 bg-gradient-to-br from-primary-dark via-primary to-primary-light">
+      <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 bg-gradient-to-br from-[#1e3529] via-[#2D4A3E] to-[#3d5f50]">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -96,13 +96,13 @@ export default function ProjectsPage() {
                 transition={{ delay: index * 0.1 }}
               >
                 <Link href={`/projects/${project.slug}`} className="block group h-full">
-                  <div className="h-full bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-6 md:p-8 hover:shadow-lg transition-all hover:-translate-y-1">
+                  <div className="h-full bg-gradient-to-br from-[#2D4A3E]/5 to-[#2D4A3E]/10 rounded-2xl p-6 md:p-8 hover:shadow-lg transition-all hover:-translate-y-1 border border-[#C4A265]/10">
                     <div className="flex items-start justify-between mb-4">
                       <span className="text-4xl">{project.emoji}</span>
                       <span
                         className={`px-3 py-1 rounded-full text-xs font-semibold ${
                           project.status === "active"
-                            ? "bg-accent/10 text-accent"
+                            ? "bg-[#C4A265]/10 text-[#C4A265]"
                             : project.status === "upcoming"
                             ? "bg-blue-100 text-blue-700"
                             : "bg-gray-100 text-gray-600"
@@ -111,7 +111,7 @@ export default function ProjectsPage() {
                         {project.statusLabel}
                       </span>
                     </div>
-                    <h3 className="font-bold text-text text-xl mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="font-bold text-primary-dark text-xl mb-2 group-hover:text-[#C4A265] transition-colors">
                       {project.title}
                     </h3>
                     <p className="flex items-center gap-1.5 text-sm text-text-light mb-3">
@@ -121,7 +121,7 @@ export default function ProjectsPage() {
                     <p className="text-text-light text-sm leading-relaxed mb-4">
                       {project.description}
                     </p>
-                    <span className="inline-flex items-center gap-1 text-primary font-semibold text-sm group-hover:gap-2 transition-all">
+                    <span className="inline-flex items-center gap-1 text-[#C4A265] font-semibold text-sm group-hover:gap-2 transition-all">
                       Learn more <ArrowRight size={14} />
                     </span>
                   </div>

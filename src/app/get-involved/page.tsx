@@ -11,7 +11,7 @@ const ways = [
     description: "Your financial contribution directly funds education, meals, and healthcare for children. Every rupee counts.",
     cta: "Donate Now",
     href: "/donate",
-    color: "bg-accent/10 text-accent",
+    color: "bg-[#C4A265]/10 text-[#C4A265]",
   },
   {
     icon: <Users size={28} />,
@@ -19,7 +19,7 @@ const ways = [
     description: "Join our volunteer programs — teach at our centers, help with events, or join our field expeditions to project sites.",
     cta: "Sign Up",
     href: "/contact",
-    color: "bg-primary/10 text-primary",
+    color: "bg-[#2D4A3E]/10 text-[#2D4A3E]",
   },
   {
     icon: <HandHeart size={28} />,
@@ -50,7 +50,7 @@ const ways = [
 export default function GetInvolvedPage() {
   return (
     <>
-      <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 bg-gradient-to-br from-primary-dark via-primary to-primary-light">
+      <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 bg-gradient-to-br from-[#1e3529] via-[#2D4A3E] to-[#3d5f50]">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -80,17 +80,17 @@ export default function GetInvolvedPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="flex flex-col md:flex-row items-start gap-6 bg-white border border-gray-100 rounded-2xl p-6 md:p-8 hover:shadow-lg transition-shadow"
+                className="flex flex-col md:flex-row items-start gap-6 bg-white border border-[#C4A265]/10 rounded-2xl p-6 md:p-8 hover:shadow-lg transition-shadow"
               >
                 <div className={`w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 ${way.color}`}>
                   {way.icon}
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-bold text-text text-xl mb-2">{way.title}</h3>
+                  <h3 className="font-bold text-primary-dark text-xl mb-2">{way.title}</h3>
                   <p className="text-text-light leading-relaxed mb-4">{way.description}</p>
                   <Link
                     href={way.href}
-                    className="inline-flex items-center gap-2 px-6 py-2.5 bg-primary hover:bg-primary-light text-white font-semibold rounded-full transition-all text-sm hover:shadow-md"
+                    className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#2D4A3E] hover:bg-[#3d5f50] text-white font-semibold rounded-full transition-all text-sm hover:shadow-md"
                   >
                     {way.cta}
                   </Link>

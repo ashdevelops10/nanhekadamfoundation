@@ -35,7 +35,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 bg-gradient-to-br from-primary-dark via-primary to-primary-light">
+      <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 bg-gradient-to-br from-[#1e3529] via-[#2D4A3E] to-[#3d5f50]">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -64,8 +64,8 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Story</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-text mt-3 mb-6">
+            <span className="text-[#C4A265] font-semibold text-sm uppercase tracking-wider">Our Story</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-dark mt-3 mb-6">
               How It All Began
             </h2>
             <div className="prose prose-lg max-w-none text-text-light space-y-4">
@@ -95,8 +95,8 @@ export default function AboutPage() {
       <section className="py-20 bg-warm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider">What Drives Us</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-text mt-3">Our Values</h2>
+            <span className="text-[#C4A265] font-semibold text-sm uppercase tracking-wider">What Drives Us</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-dark mt-3">Our Values</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {values.map((value, index) => (
@@ -108,10 +108,10 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white rounded-2xl p-6 hover:shadow-lg transition-shadow"
               >
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-4">
+                <div className="w-12 h-12 bg-[#C4A265]/10 rounded-xl flex items-center justify-center text-[#C4A265] mb-4">
                   {value.icon}
                 </div>
-                <h3 className="font-bold text-text text-lg mb-2">{value.title}</h3>
+                <h3 className="font-bold text-primary-dark text-lg mb-2">{value.title}</h3>
                 <p className="text-sm text-text-light leading-relaxed">{value.description}</p>
               </motion.div>
             ))}
@@ -123,11 +123,11 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Journey</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-text mt-3">Milestones</h2>
+            <span className="text-[#C4A265] font-semibold text-sm uppercase tracking-wider">Our Journey</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-dark mt-3">Milestones</h2>
           </div>
           <div className="relative">
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 -translate-x-1/2" />
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-[#C4A265]/20 -translate-x-1/2" />
             {milestones.map((item, index) => (
               <motion.div
                 key={index}
@@ -139,9 +139,9 @@ export default function AboutPage() {
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
               >
-                <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-primary rounded-full -translate-x-1/2 mt-1.5 ring-4 ring-white" />
+                <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-[#C4A265] rounded-full -translate-x-1/2 mt-1.5 ring-4 ring-white" />
                 <div className={`ml-10 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
-                  <span className="text-accent font-bold text-sm">{item.year}</span>
+                  <span className="text-[#C4A265] font-bold text-sm">{item.year}</span>
                   <p className="text-text mt-1">{item.event}</p>
                 </div>
               </motion.div>
@@ -154,8 +154,8 @@ export default function AboutPage() {
       <section className="py-20 bg-warm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our People</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-text mt-3">Founders & Board</h2>
+            <span className="text-[#C4A265] font-semibold text-sm uppercase tracking-wider">Our People</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-dark mt-3">Founders & Board</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {team.map((member, index) => (
@@ -167,7 +167,7 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-shadow"
               >
-                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-20 h-20 bg-[#C4A265]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-3xl">{member.emoji}</span>
                 </div>
                 <h3 className="font-bold text-text">{member.name}</h3>

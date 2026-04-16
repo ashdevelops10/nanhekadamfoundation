@@ -81,10 +81,10 @@ export default function ProgramsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+          <span className="text-[#C4A265] font-semibold text-sm uppercase tracking-wider">
             What We Do
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-text mt-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-dark mt-3">
             Our Programs
           </h2>
         </motion.div>
@@ -101,20 +101,20 @@ export default function ProgramsSection() {
                 href={`/programs/${program.slug}`}
                 className="block group h-full"
               >
-                <div className="h-full bg-white rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-1 border border-gray-100">
+                <div className="h-full bg-white rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-1 border border-[#C4A265]/10">
                   <div className="flex items-start justify-between mb-4">
                     <span className="text-3xl">{program.emoji}</span>
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-semibold ${
                         program.status === "active"
-                          ? "bg-accent/10 text-accent"
+                          ? "bg-[#C4A265]/10 text-[#C4A265]"
                           : "bg-gray-100 text-gray-600"
                       }`}
                     >
                       {program.statusLabel}
                     </span>
                   </div>
-                  <h3 className="font-bold text-text text-lg mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="font-bold text-primary-dark text-lg mb-2 group-hover:text-[#C4A265] transition-colors">
                     {program.title}
                   </h3>
                   <p className="text-sm text-text-light leading-relaxed mb-4">

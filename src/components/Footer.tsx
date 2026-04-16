@@ -6,27 +6,27 @@ import NewsletterForm from "./NewsletterForm";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-dark text-white">
+    <footer className="bg-[#1e3529] text-white">
       {/* CTA Section */}
-      <div className="bg-primary py-16 px-4">
+      <div className="bg-[#2D4A3E] py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl md:text-4xl font-bold mb-4">
             Help Us Give Every Child a Brighter Future
           </h2>
-          <p className="text-white/80 mb-8 text-lg max-w-2xl mx-auto">
+          <p className="text-white/70 mb-8 text-lg max-w-2xl mx-auto">
             Every small step counts. Join us in making a lasting difference in the lives of
             underprivileged children across India.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/donate"
-              className="px-8 py-3.5 bg-accent hover:bg-accent-light text-white font-semibold rounded-full transition-all hover:shadow-lg hover:scale-105"
+              className="px-8 py-3.5 bg-[#C4A265] hover:bg-[#d4b87a] text-[#2D4A3E] font-bold rounded-full transition-all hover:shadow-lg hover:scale-105"
             >
               Donate Now
             </Link>
             <Link
               href="/get-involved"
-              className="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full transition-all border border-white/30"
+              className="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full transition-all border border-white/20"
             >
               Get Involved
             </Link>
@@ -131,7 +131,7 @@ export default function Footer() {
             © 2026 Nanhe Kadam Foundation. All rights reserved.
           </p>
           <p className="text-white/50 text-sm flex items-center gap-1">
-            Made with <Heart size={14} className="text-accent" /> for every child
+            Made with <Heart size={14} className="text-[#C4A265]" /> for every child
           </p>
         </div>
       </div>

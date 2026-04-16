@@ -52,7 +52,7 @@ const news = [
 export default function NewsPage() {
   return (
     <>
-      <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 bg-gradient-to-br from-primary-dark via-primary to-primary-light">
+      <section className="relative pt-36 pb-20 md:pt-44 md:pb-28 bg-gradient-to-br from-[#1e3529] via-[#2D4A3E] to-[#3d5f50]">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -85,19 +85,19 @@ export default function NewsPage() {
                 className="group"
               >
                 <Link href={`/news/${item.slug}`} className="block h-full">
-                  <div className="h-full bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
-                    <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
+                  <div className="h-full bg-white border border-[#C4A265]/10 rounded-2xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
+                    <div className="aspect-[16/10] bg-gradient-to-br from-[#2D4A3E]/10 to-[#2D4A3E]/5 flex items-center justify-center">
                       <span className="text-5xl">{item.emoji}</span>
                     </div>
                     <div className="p-6">
                       <span className="text-sm text-text-light">{item.date}</span>
-                      <h3 className="font-bold text-text text-lg mt-1 mb-2 group-hover:text-primary transition-colors leading-snug">
+                      <h3 className="font-bold text-primary-dark text-lg mt-1 mb-2 group-hover:text-[#C4A265] transition-colors leading-snug">
                         {item.title}
                       </h3>
                       <p className="text-sm text-text-light leading-relaxed mb-3">
                         {item.excerpt}
                       </p>
-                      <span className="inline-flex items-center gap-1 text-primary font-semibold text-sm group-hover:gap-2 transition-all">
+                      <span className="inline-flex items-center gap-1 text-[#C4A265] font-semibold text-sm group-hover:gap-2 transition-all">
                         Read more <ArrowRight size={14} />
                       </span>
                     </div>
