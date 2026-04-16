@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #2D4A3E;
+  --color-primary-light: #3d5f50;
+  --color-primary-dark: #1e3529;
+  --color-accent: #C4A265;
+  --color-accent-light: #d4b87a;
+  --color-accent-dark: #a8884e;
+  --color-warm: #FAF6EE;
+  --color-warm-dark: #F5ECD7;
+  --color-cream: #FDF9F0;
+  --color-text: #1a1a1a;
+  --color-text-light: #5a5a5a;
+  --color-background: #ffffff;
+  --color-foreground: #1a1a1a;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-warm);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-dark);
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Counter animation */
+@keyframes countUp {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-count-up {
+  animation: countUp 0.8s ease-out forwards;
+}
