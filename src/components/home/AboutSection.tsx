@@ -66,8 +66,8 @@ export default function AboutSection() {
           >
             <div className="rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/activity-1.jpg"
-                alt="Nanhe Kadam Foundation activities"
+                src="/images/insta-health-camp.png"
+                alt="Nanhe Kadam Foundation Free Health Checkup Camp"
                 className="w-full h-auto object-cover"
               />
             </div>
