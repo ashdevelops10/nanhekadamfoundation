@@ -4,6 +4,7 @@ import AboutSection from "@/components/home/AboutSection";
 import ProjectsSection from "@/components/home/ProjectsSection";
 import ProgramsSection from "@/components/home/ProgramsSection";
 import StatsSection from "@/components/home/StatsSection";
+import InstagramSection from "@/components/home/InstagramSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <NewsSection />
       <AboutSection />
       <StatsSection />
+      <InstagramSection />
       <ProjectsSection />
       <ProgramsSection />
     </>

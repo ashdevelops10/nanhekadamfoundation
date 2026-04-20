@@ -1,13 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Heart, Users, Target, Award, BookOpen, Globe } from "lucide-react";
+import { Heart, Users, Target, Award, BookOpen, Globe, User } from "lucide-react";
 
 const team = [
-  { name: "Aarav Sharma", role: "Founder & President", emoji: "👨‍💼" },
-  { name: "Priya Patel", role: "Co-Founder & Secretary", emoji: "👩‍💼" },
-  { name: "Rajesh Kumar", role: "Treasurer", emoji: "👨‍💻" },
-  { name: "Anjali Verma", role: "Program Director", emoji: "👩‍🏫" },
+  { name: "Dr. Neeraj Tanwar", role: "Founder", location: "Delhi" },
+  { name: "Dr. Aditi Singh", role: "Trustee", location: "Delhi" },
+  { name: "Dr. Manish Pareek", role: "Rajasthan Region Controller", location: "S.M. Hospital, Jaipur" },
 ];
 
 const values = [
@@ -72,8 +71,8 @@ export default function AboutPage() {
               <p>
                 Nanhe Kadam — meaning &quot;small steps&quot; in Hindi — was born from a simple belief:
                 that every child, no matter their circumstances, deserves the chance to learn, grow,
-                and dream. Founded in 2018 by Aarav Sharma and Priya Patel, the foundation started
-                with a single classroom in a rented space in Jaipur.
+                and dream. Founded by Dr. Neeraj Tanwar, the foundation started
+                with a mission to join hands for effective humanitarian response.
               </p>
               <p>
                 What began as weekend tutoring sessions for 15 children quickly grew into a movement.
@@ -157,7 +156,7 @@ export default function AboutPage() {
             <span className="text-[#C4A265] font-semibold text-sm uppercase tracking-wider">Our People</span>
             <h2 className="text-3xl md:text-4xl font-bold text-primary-dark mt-3">Founders & Board</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {team.map((member, index) => (
               <motion.div
                 key={index}
@@ -167,11 +166,12 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-shadow"
               >
-                <div className="w-20 h-20 bg-[#C4A265]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">{member.emoji}</span>
+                <div className="w-20 h-20 bg-[#2D4A3E]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <User size={32} className="text-[#2D4A3E]" />
                 </div>
                 <h3 className="font-bold text-text">{member.name}</h3>
-                <p className="text-sm text-text-light mt-1">{member.role}</p>
+                <p className="text-sm text-[#C4A265] font-medium mt-1">{member.role}</p>
+                <p className="text-xs text-text-light mt-0.5">{member.location}</p>
               </motion.div>
             ))}
           </div>

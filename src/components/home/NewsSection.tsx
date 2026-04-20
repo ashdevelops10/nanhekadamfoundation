@@ -5,6 +5,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const news = [
   {
@@ -14,14 +15,16 @@ const news = [
     excerpt:
       "After months of preparation, our team of 20 volunteers is on its way to set up new learning centers in rural Rajasthan.",
     slug: "volunteers-head-to-rajasthan",
+    image: "/images/event-7.jpg",
   },
   {
     id: 2,
-    title: "Teacher Meera Devi: A Life of Dedication and Compassion",
+    title: "Free Health Checkup Camp: 200+ Children Served",
     date: "April 1, 2026",
     excerpt:
-      "Meet Meera Devi, the inspiring teacher who has been transforming lives at our Udaan Learning Center for over a decade.",
-    slug: "teacher-meera-devi-story",
+      "Our team of doctors conducted a free health checkup camp providing immunizations, check-ups, and medicines to over 200 children.",
+    slug: "free-health-checkup-camp",
+    image: "/images/event-8.jpg",
   },
   {
     id: 3,
@@ -30,6 +33,7 @@ const news = [
     excerpt:
       "50 students successfully completed their primary education at our centers. A celebration of perseverance and hope.",
     slug: "ceremony-for-50-graduates",
+    image: "/images/event-9.jpg",
   },
 ];
 
@@ -72,10 +76,13 @@ export default function NewsSection() {
               className="group"
             >
               <Link href={`/news/${item.slug}`} className="block">
-                <div className="aspect-[16/10] bg-gradient-to-br from-[#2D4A3E]/10 to-[#2D4A3E]/5 rounded-2xl mb-4 overflow-hidden flex items-center justify-center">
-                  <span className="text-5xl">
-                    {index === 0 ? "🏫" : index === 1 ? "👩‍🏫" : "🎓"}
-                  </span>
+                <div className="aspect-[16/10] rounded-2xl mb-4 overflow-hidden relative">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
                 <span className="text-sm text-text-light">{item.date}</span>
                 <h3 className="text-lg font-bold text-primary-dark mt-1 mb-2 group-hover:text-[#C4A265] transition-colors leading-snug">

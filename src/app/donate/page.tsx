@@ -2,17 +2,18 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Heart, Shield, TrendingUp, Users } from "lucide-react";
+import { Heart, Shield, TrendingUp, Users, UtensilsCrossed, BookOpen, GraduationCap, Monitor, Droplets, School } from "lucide-react";
+import { type ReactNode } from "react";
 
 const amounts = [500, 1000, 2000, 5000, 10000, 25000];
 
-const impactCards = [
-  { amount: "₹500", impact: "Provides meals for a child for 1 month", emoji: "🍽️" },
-  { amount: "₹1,000", impact: "Supplies school books and stationery for a year", emoji: "📚" },
-  { amount: "₹2,000", impact: "Sponsors a child's complete monthly education", emoji: "🎓" },
-  { amount: "₹5,000", impact: "Funds a computer for our Digital Literacy lab", emoji: "💻" },
-  { amount: "₹10,000", impact: "Installs a water purification unit for a school", emoji: "💧" },
-  { amount: "₹25,000", impact: "Builds a classroom that serves 30 children", emoji: "🏫" },
+const impactCards: { amount: string; impact: string; icon: ReactNode }[] = [
+  { amount: "₹500", impact: "Provides meals for a child for 1 month", icon: <UtensilsCrossed size={20} /> },
+  { amount: "₹1,000", impact: "Supplies school books and stationery for a year", icon: <BookOpen size={20} /> },
+  { amount: "₹2,000", impact: "Sponsors a child's complete monthly education", icon: <GraduationCap size={20} /> },
+  { amount: "₹5,000", impact: "Funds a computer for our Digital Literacy lab", icon: <Monitor size={20} /> },
+  { amount: "₹10,000", impact: "Installs a water purification unit for a school", icon: <Droplets size={20} /> },
+  { amount: "₹25,000", impact: "Builds a classroom that serves 30 children", icon: <School size={20} /> },
 ];
 
 export default function DonatePage() {
@@ -171,7 +172,9 @@ export default function DonatePage() {
                     key={index}
                     className="flex items-start gap-3 p-4 bg-[#2D4A3E]/5 rounded-xl border border-[#C4A265]/10"
                   >
-                    <span className="text-2xl">{card.emoji}</span>
+                    <div className="w-9 h-9 bg-[#C4A265]/10 rounded-lg flex items-center justify-center text-[#C4A265] shrink-0">
+                      {card.icon}
+                    </div>
                     <div>
                       <span className="font-bold text-[#C4A265] text-sm">{card.amount}</span>
                       <p className="text-text-light text-sm mt-0.5">{card.impact}</p>

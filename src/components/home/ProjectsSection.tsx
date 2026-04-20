@@ -3,16 +3,17 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
-import { MapPin, ArrowRight } from "lucide-react";
+import { MapPin, ArrowRight, School, Apple, Wrench, HeartPulse } from "lucide-react";
+import { type ReactNode } from "react";
 
-const projects = [
+const projects: { id: number; title: string; location: string; status: string; statusLabel: string; icon: ReactNode; slug: string }[] = [
   {
     id: 1,
     title: "Udaan Learning Center",
     location: "Jaipur, Rajasthan",
     status: "active",
     statusLabel: "Donate Now",
-    emoji: "🏫",
+    icon: <School size={24} />,
     slug: "udaan-learning-center",
   },
   {
@@ -21,7 +22,7 @@ const projects = [
     location: "Varanasi, Uttar Pradesh",
     status: "active",
     statusLabel: "Donate Now",
-    emoji: "🍱",
+    icon: <Apple size={24} />,
     slug: "asha-nutrition-program",
   },
   {
@@ -30,7 +31,7 @@ const projects = [
     location: "Patna, Bihar",
     status: "upcoming",
     statusLabel: "Coming Soon",
-    emoji: "🛠️",
+    icon: <Wrench size={24} />,
     slug: "pragati-skill-center",
   },
   {
@@ -39,7 +40,7 @@ const projects = [
     location: "Bhopal, Madhya Pradesh",
     status: "completed",
     statusLabel: "Completed",
-    emoji: "🏥",
+    icon: <HeartPulse size={24} />,
     slug: "naya-savera-health-clinic",
   },
 ];
@@ -78,7 +79,9 @@ export default function ProjectsSection() {
                 className="block group h-full"
               >
                 <div className="h-full bg-gradient-to-br from-[#2D4A3E]/5 to-[#2D4A3E]/10 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-1 border border-[#C4A265]/10">
-                  <div className="text-4xl mb-4">{project.emoji}</div>
+                  <div className="w-12 h-12 bg-[#2D4A3E]/10 rounded-xl flex items-center justify-center text-[#2D4A3E] mb-4">
+                    {project.icon}
+                  </div>
                   <span
                     className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3 ${
                       project.status === "active"

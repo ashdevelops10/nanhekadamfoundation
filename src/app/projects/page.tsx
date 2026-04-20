@@ -2,15 +2,16 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { MapPin, ArrowRight } from "lucide-react";
+import { MapPin, ArrowRight, School, Apple, Wrench, HeartPulse, BookOpen, Monitor } from "lucide-react";
+import { type ReactNode } from "react";
 
-const projects = [
+const projects: { title: string; location: string; status: string; statusLabel: string; icon: ReactNode; slug: string; description: string }[] = [
   {
     title: "Udaan Learning Center",
     location: "Jaipur, Rajasthan",
     status: "active",
     statusLabel: "Donate Now",
-    emoji: "🏫",
+    icon: <School size={24} />,
     slug: "udaan-learning-center",
     description: "Our flagship learning center providing quality education to 400+ children from underprivileged backgrounds in rural Rajasthan.",
   },
@@ -19,7 +20,7 @@ const projects = [
     location: "Varanasi, Uttar Pradesh",
     status: "active",
     statusLabel: "Donate Now",
-    emoji: "🍱",
+    icon: <Apple size={24} />,
     slug: "asha-nutrition-program",
     description: "A comprehensive nutrition center combating malnutrition among children under 5 and providing dietary education to mothers.",
   },
@@ -28,7 +29,7 @@ const projects = [
     location: "Patna, Bihar",
     status: "upcoming",
     statusLabel: "Coming Soon",
-    emoji: "🛠️",
+    icon: <Wrench size={24} />,
     slug: "pragati-skill-center",
     description: "A vocational training center offering skill development courses for youth and women in areas like tailoring, computing, and handicrafts.",
   },
@@ -37,7 +38,7 @@ const projects = [
     location: "Bhopal, Madhya Pradesh",
     status: "completed",
     statusLabel: "Completed",
-    emoji: "🏥",
+    icon: <HeartPulse size={24} />,
     slug: "naya-savera-health-clinic",
     description: "A community health clinic providing free health check-ups, vaccinations, and maternal care to underprivileged families.",
   },
@@ -46,7 +47,7 @@ const projects = [
     location: "Lucknow, Uttar Pradesh",
     status: "active",
     statusLabel: "Donate Now",
-    emoji: "📖",
+    icon: <BookOpen size={24} />,
     slug: "kiran-community-school",
     description: "A community-run school offering primary and secondary education with a focus on girls' education and empowerment.",
   },
@@ -55,7 +56,7 @@ const projects = [
     location: "Jodhpur, Rajasthan",
     status: "active",
     statusLabel: "Donate Now",
-    emoji: "💻",
+    icon: <Monitor size={24} />,
     slug: "umeed-digital-lab",
     description: "A state-of-the-art computer lab providing digital literacy and coding education to rural children and youth.",
   },
@@ -98,7 +99,9 @@ export default function ProjectsPage() {
                 <Link href={`/projects/${project.slug}`} className="block group h-full">
                   <div className="h-full bg-gradient-to-br from-[#2D4A3E]/5 to-[#2D4A3E]/10 rounded-2xl p-6 md:p-8 hover:shadow-lg transition-all hover:-translate-y-1 border border-[#C4A265]/10">
                     <div className="flex items-start justify-between mb-4">
-                      <span className="text-4xl">{project.emoji}</span>
+                      <div className="w-12 h-12 bg-[#2D4A3E]/10 rounded-xl flex items-center justify-center text-[#2D4A3E]">
+                        {project.icon}
+                      </div>
                       <span
                         className={`px-3 py-1 rounded-full text-xs font-semibold ${
                           project.status === "active"

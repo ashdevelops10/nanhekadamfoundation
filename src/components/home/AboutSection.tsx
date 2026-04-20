@@ -12,18 +12,18 @@ export default function AboutSection() {
   const highlights = [
     {
       icon: <TrendingUp size={24} />,
-      title: "97% to Projects",
-      description: "Of every donation goes directly to our supported programs",
+      title: "Student-Founded",
+      description: "Established by a group of students driven to make a difference in children's lives",
     },
     {
       icon: <Heart size={24} />,
-      title: "Self-Sustaining",
-      description: "We build projects designed to become self-sufficient over time",
+      title: "Holistic Development",
+      description: "Empowering children through health, education, and skill development",
     },
     {
       icon: <Eye size={24} />,
       title: "Full Transparency",
-      description: "Visit any of our projects and see the impact firsthand",
+      description: "Committed to providing donors feedback on the impact of every contribution",
     },
   ];
 
@@ -44,9 +44,10 @@ export default function AboutSection() {
               Nanhe Kadam Foundation
             </h2>
             <p className="text-text-light leading-relaxed mb-6 text-base md:text-lg">
-              We help local communities set up and sustain educational projects that are
-              embedded in their local environment and can eventually stand on their own.
-              From schools to nutrition programs, every initiative is built to last.
+              &quot;Nanhe Kadam&quot; — small steps — represents our driving force: small significant
+              steps of deserving children towards a brighter future. We organize health camps,
+              education programmes, and talent-building activities in villages across India,
+              igniting the hope of a better tomorrow for socially deprived children.
             </p>
             <Link
               href="/about"
@@ -56,26 +57,38 @@ export default function AboutSection() {
             </Link>
           </motion.div>
 
-          {/* Right - Cards */}
-          <div className="grid gap-4 sm:gap-6">
+          {/* Right - Photo & Cards */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
+          >
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="/images/activity-1.jpg"
+                alt="Nanhe Kadam Foundation activities"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {highlights.map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: 30 }}
-                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="flex items-start gap-4 p-5 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-[#C4A265]/10"
+                className="flex flex-col items-center text-center gap-2 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-[#C4A265]/10"
               >
-                <div className="w-12 h-12 bg-[#C4A265]/10 rounded-xl flex items-center justify-center text-[#C4A265] shrink-0">
+                <div className="w-10 h-10 bg-[#C4A265]/10 rounded-lg flex items-center justify-center text-[#C4A265] shrink-0">
                   {item.icon}
                 </div>
-                <div>
-                  <h3 className="font-bold text-primary-dark text-base">{item.title}</h3>
-                  <p className="text-sm text-text-light mt-1">{item.description}</p>
-                </div>
+                <h3 className="font-bold text-primary-dark text-sm">{item.title}</h3>
+                <p className="text-xs text-text-light leading-snug">{item.description}</p>
               </motion.div>
             ))}
-          </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

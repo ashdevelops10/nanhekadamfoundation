@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nanhe Kadam Foundation | Small Steps, Big Change",
+  title: "Nanhe Kadam Foundation | Kids Can Skip Meals, Not Dreams",
   description:
-    "Empowering underprivileged children across India through education, nutrition, and community development. Every small step leads to a brighter tomorrow.",
+    "Nanhe Kadam Foundation (NGO) — Educate, Heal, Empower. Bringing hope to every child in need. Be the reason they smile!",
   keywords: ["NGO", "children", "education", "India", "foundation", "donate", "charity"],
 };
 

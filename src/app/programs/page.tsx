@@ -2,15 +2,16 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, GraduationCap, UtensilsCrossed, Droplets, Briefcase, Monitor, BookOpen, Stethoscope, Trophy } from "lucide-react";
+import { type ReactNode } from "react";
 
-const programs = [
+const programs: { title: string; description: string; status: string; statusLabel: string; icon: ReactNode; slug: string; impact: string }[] = [
   {
     title: "Nanhe Kadam Scholarship Fund",
     description: "Providing promising and underprivileged students the opportunity for higher education through merit-based scholarships. We cover tuition, books, uniforms, and mentorship.",
     status: "active",
     statusLabel: "Donate Now",
-    emoji: "🎓",
+    icon: <GraduationCap size={24} />,
     slug: "scholarship-fund",
     impact: "200+ scholarships awarded",
   },
@@ -19,7 +20,7 @@ const programs = [
     description: "Serving 500+ children a nutritious, balanced meal every school day. Good nutrition is the foundation of effective learning.",
     status: "active",
     statusLabel: "Donate Now",
-    emoji: "🍽️",
+    icon: <UtensilsCrossed size={24} />,
     slug: "mid-day-meal",
     impact: "500+ meals served daily",
   },
@@ -28,7 +29,7 @@ const programs = [
     description: "Installing water purification systems and bore wells to provide clean drinking water to schools and surrounding communities.",
     status: "active",
     statusLabel: "Donate Now",
-    emoji: "💧",
+    icon: <Droplets size={24} />,
     slug: "clean-water",
     impact: "8 systems installed",
   },
@@ -37,7 +38,7 @@ const programs = [
     description: "Skill development workshops for mothers — from tailoring and handicrafts to financial literacy — enabling them to support their families.",
     status: "active",
     statusLabel: "Join Now",
-    emoji: "👩‍💼",
+    icon: <Briefcase size={24} />,
     slug: "women-empowerment",
     impact: "150+ women trained",
   },
@@ -46,7 +47,7 @@ const programs = [
     description: "Teaching children essential computer skills, coding basics, and internet literacy to prepare them for the opportunities of the modern world.",
     status: "active",
     statusLabel: "Donate Now",
-    emoji: "💻",
+    icon: <Monitor size={24} />,
     slug: "digital-literacy",
     impact: "3 computer labs built",
   },
@@ -55,7 +56,7 @@ const programs = [
     description: "Establishing well-stocked libraries in rural areas with books in Hindi, English, and regional languages to promote reading and self-learning.",
     status: "completed",
     statusLabel: "Completed",
-    emoji: "📚",
+    icon: <BookOpen size={24} />,
     slug: "community-library",
     impact: "5,000+ books distributed",
   },
@@ -64,7 +65,7 @@ const programs = [
     description: "Regular health screenings, dental check-ups, and eye exams for children at all our centers. Early detection saves lives.",
     status: "active",
     statusLabel: "Donate Now",
-    emoji: "🏥",
+    icon: <Stethoscope size={24} />,
     slug: "health-checkups",
     impact: "1,200+ children screened",
   },
@@ -73,7 +74,7 @@ const programs = [
     description: "Organizing sports events, art workshops, and cultural programs to promote holistic development and joyful childhoods.",
     status: "active",
     statusLabel: "Join Now",
-    emoji: "⚽",
+    icon: <Trophy size={24} />,
     slug: "sports-recreation",
     impact: "Annual sports day for 800+ kids",
   },
@@ -116,7 +117,9 @@ export default function ProgramsPage() {
                 <Link href={`/programs/${program.slug}`} className="block group h-full">
                   <div className="h-full bg-white border border-[#C4A265]/10 rounded-2xl p-6 md:p-8 hover:shadow-lg transition-all hover:-translate-y-1">
                     <div className="flex items-start justify-between mb-4">
-                      <span className="text-4xl">{program.emoji}</span>
+                      <div className="w-12 h-12 bg-[#2D4A3E]/10 rounded-xl flex items-center justify-center text-[#2D4A3E]">
+                        {program.icon}
+                      </div>
                       <span
                         className={`px-3 py-1 rounded-full text-xs font-semibold ${
                           program.status === "active"

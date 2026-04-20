@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -48,9 +49,9 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-[#2D4A3E] text-sm font-medium">
-            Follow our journey from April 10-20{" "}
-            <Link href="/news" className="underline font-semibold hover:opacity-80 transition-opacity">
-              More info
+            Educate • Heal • Empower — Bringing hope to every child in need{" "}
+            <Link href="/donate" className="underline font-semibold hover:opacity-80 transition-opacity">
+              Donate Now
             </Link>
           </p>
         </div>
@@ -62,50 +63,13 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16 md:h-[72px]">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              {/* Logo Icon */}
-              <svg
-                width="36"
-                height="36"
-                viewBox="0 0 48 48"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="shrink-0"
-              >
-                <path
-                  d="M24 4C24 4 16 12 16 20C16 24.4 19.6 28 24 28C28.4 28 32 24.4 32 20C32 12 24 4 24 4Z"
-                  fill="#C4A265"
-                />
-                <path
-                  d="M24 28V44"
-                  stroke="#C4A265"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M18 36C18 36 14 32 10 32"
-                  stroke="#C4A265"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M30 36C30 36 34 32 38 32"
-                  stroke="#C4A265"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M16 20C12 18 8 20 6 24"
-                  stroke="#C4A265"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M32 20C36 18 40 20 42 24"
-                  stroke="#C4A265"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
+              <Image
+                src="/images/logo.jpg"
+                alt="Nanhe Kadam Foundation Logo"
+                width={44}
+                height={44}
+                className="rounded-full shrink-0"
+              />
               <div className="flex flex-col leading-none">
                 <span className="text-[#C4A265] font-bold text-lg md:text-xl tracking-wide">
                   NANHE KADAM

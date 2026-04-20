@@ -71,8 +71,11 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-primary-dark">Email</h3>
-                      <a href="mailto:info@nanhekadamfoundation.org" className="text-text-light text-sm mt-0.5 hover:text-primary transition-colors">
-                        info@nanhekadamfoundation.org
+                      <a href="mailto:info@nanhekadamfoundation.com" className="text-text-light text-sm mt-0.5 hover:text-primary transition-colors">
+                        info@nanhekadamfoundation.com
+                      </a>
+                      <a href="mailto:healingmiles@nanhekadamfoundation.com" className="text-text-light text-sm mt-0.5 hover:text-primary transition-colors block">
+                        healingmiles@nanhekadamfoundation.com
                       </a>
                     </div>
                   </div>
