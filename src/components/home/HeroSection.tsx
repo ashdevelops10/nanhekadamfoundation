@@ -18,7 +18,7 @@ export default function HeroSection() {
       {/* Dark overlay for readability */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#1e3529]/80 via-[#2D4A3E]/70 to-[#3d5f50]/65" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pb-20 md:pb-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

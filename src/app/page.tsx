@@ -1,7 +1,6 @@
 import HeroSection from "@/components/home/HeroSection";
-import NewsSection from "@/components/home/NewsSection";
+import CampaignSection from "@/components/home/CampaignSection";
 import AboutSection from "@/components/home/AboutSection";
-import ProjectsSection from "@/components/home/ProjectsSection";
 import ProgramsSection from "@/components/home/ProgramsSection";
 import StatsSection from "@/components/home/StatsSection";
 import InstagramSection from "@/components/home/InstagramSection";
@@ -10,11 +9,10 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <NewsSection />
+      <CampaignSection />
       <AboutSection />
       <StatsSection />
       <InstagramSection />
-      <ProjectsSection />
       <ProgramsSection />
     </>
   );
