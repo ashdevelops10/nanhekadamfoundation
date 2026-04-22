@@ -114,7 +114,7 @@ export default function ProgramsPage() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
               >
-                <Link href={`/programs/${program.slug}`} className="block group h-full">
+                <div className="block group h-full">
                   <div className="h-full bg-white border border-[#C4A265]/10 rounded-2xl p-6 md:p-8 hover:shadow-lg transition-all hover:-translate-y-1">
                     <div className="flex items-start justify-between mb-4">
                       <div className="w-12 h-12 bg-[#2D4A3E]/10 rounded-xl flex items-center justify-center text-[#2D4A3E]">
@@ -140,12 +140,9 @@ export default function ProgramsPage() {
                       <span className="text-sm font-medium text-[#2D4A3E] bg-[#2D4A3E]/5 px-3 py-1 rounded-full">
                         {program.impact}
                       </span>
-                      <span className="inline-flex items-center gap-1 text-[#C4A265] font-semibold text-sm group-hover:gap-2 transition-all">
-                        Learn more <ArrowRight size={14} />
-                      </span>
                     </div>
                   </div>
-                </Link>
+                </div>
               </motion.div>
             ))}
           </div>

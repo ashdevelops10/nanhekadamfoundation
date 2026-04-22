@@ -85,7 +85,7 @@ export default function NewsPage() {
                 transition={{ delay: index * 0.08 }}
                 className="group"
               >
-                <Link href={`/news/${item.slug}`} className="block h-full">
+                <div className="block h-full">
                   <div className="h-full bg-white border border-[#C4A265]/10 rounded-2xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
                     <div className="aspect-[16/10] bg-gradient-to-br from-[#2D4A3E]/10 to-[#2D4A3E]/5 flex items-center justify-center">
                       <div className="w-14 h-14 bg-[#2D4A3E]/10 rounded-xl flex items-center justify-center text-[#2D4A3E]">
@@ -100,12 +100,9 @@ export default function NewsPage() {
                       <p className="text-sm text-text-light leading-relaxed mb-3">
                         {item.excerpt}
                       </p>
-                      <span className="inline-flex items-center gap-1 text-[#C4A265] font-semibold text-sm group-hover:gap-2 transition-all">
-                        Read more <ArrowRight size={14} />
-                      </span>
                     </div>
                   </div>
-                </Link>
+                </div>
               </motion.article>
             ))}
           </div>

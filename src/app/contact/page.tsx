@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState, FormEvent } from "react";
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, Clock, Send, CheckCircle } from "lucide-react";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -56,17 +56,6 @@ export default function ContactPage() {
                 <div className="space-y-5">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 bg-[#C4A265]/10 rounded-xl flex items-center justify-center text-[#C4A265] shrink-0">
-                      <MapPin size={20} />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-primary-dark">Address</h3>
-                      <p className="text-text-light text-sm mt-0.5">
-                        123 Community Lane, Saket<br />New Delhi, India 110017
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[#C4A265]/10 rounded-xl flex items-center justify-center text-[#C4A265] shrink-0">
                       <Mail size={20} />
                     </div>
                     <div>
@@ -85,8 +74,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-primary-dark">Phone</h3>
-                      <a href="tel:+911234567890" className="text-text-light text-sm mt-0.5 hover:text-primary transition-colors">
-                        +91 12345 67890
+                      <a href="tel:+919521697717" className="text-text-light text-sm mt-0.5 hover:text-primary transition-colors">
+                        +91 9521697717
                       </a>
                     </div>
                   </div>

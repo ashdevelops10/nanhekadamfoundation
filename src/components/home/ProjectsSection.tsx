@@ -74,10 +74,7 @@ export default function ProjectsSection() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Link
-                href={`/projects/${project.slug}`}
-                className="block group h-full"
-              >
+              <div className="block group h-full">
                 <div className="h-full bg-gradient-to-br from-[#2D4A3E]/5 to-[#2D4A3E]/10 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-1 border border-[#C4A265]/10">
                   <div className="w-12 h-12 bg-[#2D4A3E]/10 rounded-xl flex items-center justify-center text-[#2D4A3E] mb-4">
                     {project.icon}
@@ -101,7 +98,7 @@ export default function ProjectsSection() {
                     {project.location}
                   </p>
                 </div>
-              </Link>
+              </div>
             </motion.div>
           ))}
         </div>

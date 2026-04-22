@@ -75,7 +75,7 @@ export default function NewsSection() {
               transition={{ duration: 0.6, delay: index * 0.15 }}
               className="group"
             >
-              <Link href={`/news/${item.slug}`} className="block">
+              <div>
                 <div className="aspect-[16/10] rounded-2xl mb-4 overflow-hidden relative">
                   <Image
                     src={item.image}
@@ -91,10 +91,7 @@ export default function NewsSection() {
                 <p className="text-sm text-text-light leading-relaxed">
                   {item.excerpt}
                 </p>
-                <span className="inline-flex items-center gap-1 text-[#C4A265] font-semibold text-sm mt-3 group-hover:gap-2 transition-all">
-                  Read more <ArrowRight size={14} />
-                </span>
-              </Link>
+              </div>
             </motion.article>
           ))}
         </div>

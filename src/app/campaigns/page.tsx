@@ -74,16 +74,6 @@ export default function CampaignsPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1e3529]/95 via-[#2D4A3E]/60 to-[#1e3529]/40" />
 
-          {/* Badges */}
-          <div className="absolute top-6 left-6 flex flex-wrap gap-3">
-            <span className="rounded-full bg-[#C4A265] px-4 py-1.5 text-sm font-bold text-[#2D4A3E] uppercase tracking-wider">
-              80G Tax Benefit
-            </span>
-            <span className="rounded-full bg-red-500 px-4 py-1.5 text-sm font-bold text-white uppercase tracking-wider">
-              CSR Opportunity
-            </span>
-          </div>
-
           {/* Hero Text */}
           <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-16 max-w-5xl">
             <motion.p

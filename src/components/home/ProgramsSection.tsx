@@ -98,10 +98,7 @@ export default function ProgramsSection() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Link
-                href={`/programs/${program.slug}`}
-                className="block group h-full"
-              >
+              <div className="block group h-full">
                 <div className="h-full bg-white rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-1 border border-[#C4A265]/10">
                   <div className="flex items-start justify-between mb-4">
                     <div className="w-11 h-11 bg-[#2D4A3E]/10 rounded-xl flex items-center justify-center text-[#2D4A3E]">
@@ -123,11 +120,8 @@ export default function ProgramsSection() {
                   <p className="text-sm text-text-light leading-relaxed mb-4">
                     {program.description}
                   </p>
-                  <span className="inline-flex items-center gap-1 text-primary font-semibold text-sm group-hover:gap-2 transition-all">
-                    Learn more <ArrowRight size={14} />
-                  </span>
                 </div>
-              </Link>
+              </div>
             </motion.div>
           ))}
         </div>
