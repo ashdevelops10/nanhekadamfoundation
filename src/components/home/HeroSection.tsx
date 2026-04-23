@@ -19,16 +19,6 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-[#1e3529]/80 via-[#2D4A3E]/70 to-[#3d5f50]/65" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pb-20 md:pb-24">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <span className="inline-block px-5 py-2 bg-[#C4A265]/15 backdrop-blur-sm rounded-full text-[#C4A265] text-sm font-medium mb-6 border border-[#C4A265]/30">
-            Educate &bull; Heal &bull; Empower
-          </span>
-        </motion.div>
-
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -73,7 +63,7 @@ export default function HeroSection() {
 
       {/* Marquee */}
       <div className="absolute bottom-0 left-0 right-0 bg-[#C4A265] py-3 overflow-hidden">
-        <div className="animate-marquee whitespace-nowrap flex items-center gap-8">
+        <div className="animate-marquee-mobile sm:animate-marquee whitespace-nowrap flex items-center gap-8">
           {Array.from({ length: 6 }).map((_, i) => (
             <span key={i} className="text-[#2D4A3E] font-medium text-sm flex items-center gap-8">
               <span>Educate • Heal • Empower</span>
